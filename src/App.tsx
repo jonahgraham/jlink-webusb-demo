@@ -99,7 +99,7 @@ export default function App() {
       </div>
       <div style={{ textAlign: "center" }}>
         <p>
-          Press this button to select and connec to a J-Link device and display
+          Press this button to select and connect to a J-Link device and display
           the version info.
         </p>
         <button
@@ -117,6 +117,21 @@ export default function App() {
       </div>
       <br></br>
       <div style={{ textAlign: "center" }}>{info}</div>
+      <h3 style={{ textAlign: "center" }}>Windows Notes</h3>
+      <div style={{ textAlign: "center" }}>
+        On Windows you need to configure the J-Link driver to be a WebUSB
+        compatible one instead of the Segger one. Use the{" "}
+        <a href="https://zadig.akeo.ie/">Zadig</a> tool to replace the J-Link
+        driver with the WinUSB driver. Select J-Link from the drop-down (you may
+        need to turn on Options -&gt; List All Devices).
+      </div>
+      <div style={{ textAlign: "center" }}>
+        To restore the driver to Segger's one, update the driver in Windows
+        Device Manager. See{" "}
+        <a href="https://wiki.segger.com/Incorrect_J-Link_USB_driver_installed">
+          instructions
+        </a>
+      </div>
     </div>
   );
 }
